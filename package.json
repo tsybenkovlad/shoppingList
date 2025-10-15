@@ -1,0 +1,20 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "express": "^5.1.0",
+    "mariadb": "^3.4.5"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/bootstrap-icons-1.11.0/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./Api.js"></script>
+<script src="./render.js"></script>
+<script src="./index.js"></script>
+<body class="h-100">
+<div class="d-flex flex-column h-100">
+    <div id="items-list">
+
+    </div>
+    <div class="flex-grow-1"></div>
+    <div class="add d-flex justify-content-end mb-3">
+        <button class="btn btn-lg btn-primary m-5 bi-plus-lg" data-bs-toggle="modal" data-bs-target="#addModal"></button>
+    </div>
+    <div class="container mx-auto w-75">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="https://github.com/tsybenkovlad" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1 bi-github"></a>
+                <span class="text-muted">2025 Tsybenko Vladyslav</span>
+            </div>
+
+            <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <span class="text-muted">Kyiv, Ukraine</span>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="addModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="Username" id="item-name">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-save">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
