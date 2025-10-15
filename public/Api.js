@@ -33,4 +33,13 @@ class Api {
             body: JSON.stringify({id, checked})
         })
     }
+    async update(id, name) {
+        await fetch("/update", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({id, name})
+        })
+    }
 }

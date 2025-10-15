@@ -30,7 +30,7 @@ app.post("/delete", async (request, response) => {
 });
 app.post("/update", async (request, response) => {
     let {id, name} = request.body
-    if (name === undefined || name === null || name.trim() === "" || Number(id) !== id) {
+    if (name === undefined || name === null || name.trim() === "" || Number(id) != id) {
         response.status(400).send({message: "Помилка вводу"});
         return;
     }

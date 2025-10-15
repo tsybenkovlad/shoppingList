@@ -12,7 +12,16 @@ window.addEventListener("load", async (event) => {
         modal.hide();
     })
 
-
+    const btnEdit = document.getElementById('btn-save-edit')
+    const txtNameEdit = document.querySelector('#item-name-edit')
+    const txtIdIEdit = document.querySelector('#item-id-edit')
+    btnEdit.addEventListener('click', async event => {
+        const edit = document.querySelector('#editModal');
+        await api.update(txtIdIEdit.value, txtNameEdit.value)
+        await refresh()
+        const modal = bootstrap.Modal.getInstance(edit);
+        modal.hide()
+    })
     const addModal = document.getElementById('addModal')
 
     addModal.addEventListener('shown.bs.modal', () => {
@@ -21,5 +30,10 @@ window.addEventListener("load", async (event) => {
         console.log("focus")
     })
 
+    const editModal = document.getElementById('editModal')
+    editModal.addEventListener('shown.bs.modal', () => {
+        txtNameEdit.value = ""
+        txtNameEdit.focus()
+    })
 
 });
