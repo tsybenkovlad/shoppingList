@@ -49,4 +49,6 @@ async function editListener(event) {
     const idInput = document.querySelector('#item-id-edit')
     idInput.value = event.target.parentElement.parentElement.dataset.id
     editInput.value = event.target.parentElement.parentElement.querySelector('.name').innerText
+    editInput.focus()
+    editInput.select()
 }

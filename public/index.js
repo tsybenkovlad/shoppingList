@@ -29,11 +29,4 @@ window.addEventListener("load", async (event) => {
         txtName.focus()
         console.log("focus")
     })
-
-    const editModal = document.getElementById('editModal')
-    editModal.addEventListener('shown.bs.modal', () => {
-        txtNameEdit.value = ""
-        txtNameEdit.focus()
-    })
-
 });
